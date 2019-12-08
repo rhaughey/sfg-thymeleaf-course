@@ -4,13 +4,15 @@
     <meta charset="UTF-8"/>
     <title>Course Catalog</title>
 
-    <link href="http://cdn.jsdelivr.net/webjars/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet" media="screen"/>
+    <link href="../static/css/bootstrap-3.3.4-dist/css/bootstrap.min.css" rel="stylesheet" media="screen" th:href="@{/css/bootstrap-3.3.4-dist/css/bootstrap.min.css}"/>
 
-    <script src="http://cdn.jsdelivr.net/webjars/jquery/2.1.4/jquery.min.js"></script>
+    <script src="../static/js/jquery-2.1.4.min.js" th:src="@{/js/jquery-2.1.4.min.js}"></script>
 
-    <style>
+    <link th:href="@{/css/custom.css}" rel="stylesheet" media="screen" />
+
+    <style th:remove="all">
         .jumbotron {
-            background: url('https://d2vvqscadf4c1f.cloudfront.net/rGIBmJUAT46UuLPwXo3K_Fedora_Core_Ultimate2.jpg') no-repeat center center;
+            background: url('../static/images/SpringCoreJumbotron.jpg') no-repeat center center;
             height: 350px;
             color: white;
             text-shadow: #444 0 1px 1px;
@@ -130,12 +132,13 @@
         <div class="col-md-4">
             <div class="course-listing">
                 <div class="row">
-                    <a href="product.html">
+                    <a href="product">
                         <div class="col-lg-12">
                             <div class="course-box-image-container">
                                 <img role="presentation"
-                                     src="https://d2vvqscadf4c1f.cloudfront.net/scgeIJ9wRGGNWvK0jAld_ThumbFREE_01.png"
-                                     class="course-box-image"/>
+                                     src="../static/images/SpringIntroThumb.png"
+                                     class="course-box-image"
+                                     th:src="@{/images/SpringIntroThumb.png}" />
                             </div>
                             <div class="course-listing-title">
                                 Introduction to Spring
@@ -149,10 +152,11 @@
                 <div class="row course-listing-extra-info col-xs-12">
                     <div class="col-xs-8">
                         <img align="left" alt="John Thompson"
-                             src="https://d2vvqscadf4c1f.cloudfront.net/uZC7XjnzTMyJJeq5hShi_IMG_2800square.jpg"
+                             src="../static/images/instructor_jt.jpg"
                              width="30"
                              height="30"
-                             class="img-circle"/>
+                             class="img-circle"
+                             th:src="@{/images/instructor_jt.jpg}"/>
                         <div class="small course-author-name">
                             John Thompson
                         </div>
@@ -168,12 +172,13 @@
         <div class="col-md-4">
             <div class="course-listing">
                 <div class="row">
-                    <a data-role="course-box-link" href="product.html">
+                    <a data-role="course-box-link" href="product">
                         <div class="col-lg-12">
                             <div class="course-box-image-container">
                                 <img role="presentation"
-                                     src="https://d2vvqscadf4c1f.cloudfront.net/YnsFJMclS5aYmtiAMSX0_ThumbSPRINcore.png"
-                                     class="course-box-image"/>
+                                     src="../static/images/SpringCoreThumb.png"
+                                     class="course-box-image"
+                                     th:src="@{/images/SpringCoreThumb.png}" />
                             </div>
                             <div class="course-listing-title">
                                 Spring Core
@@ -187,10 +192,11 @@
                 <div class="row course-listing-extra-info col-xs-12">
                     <div class="col-xs-8">
                         <img align="left" alt="John Thompson"
-                             src="https://d2vvqscadf4c1f.cloudfront.net/uZC7XjnzTMyJJeq5hShi_IMG_2800square.jpg"
+                             src="../static/images/instructor_jt.jpg"
                              width="30"
                              height="30"
-                             class="img-circle"/>
+                             class="img-circle"
+                             th:src="@{/images/instructor_jt.jpg}" />
                         <div class="small course-author-name">
                             John Thompson
                         </div>
@@ -206,12 +212,13 @@
         <div class="col-md-4">
             <div class="course-listing">
                 <div class="row">
-                    <a data-role="course-box-link" href="product.html">
+                    <a data-role="course-box-link" href="product">
                         <div class="col-lg-12">
                             <div class="course-box-image-container">
                                 <img role="presentation"
-                                     src="https://d2vvqscadf4c1f.cloudfront.net/fMahox0zTOW4gYkMMjmN_ThumbSPRINcoreAdv.png"
-                                     class="course-box-image"/>
+                                     src="../static/images/SpringCoreAdvancedThumb.png"
+                                     class="course-box-image"
+                                     th:src="@{/images/SpringCoreAdvancedThumb.png}"/>
                             </div>
                             <div class="course-listing-title">
                                 Spring Core Advanced
@@ -225,10 +232,11 @@
                 <div class="row course-listing-extra-info col-xs-12">
                     <div class="col-xs-8">
                         <img align="left" alt="John Thompson"
-                             src="https://d2vvqscadf4c1f.cloudfront.net/uZC7XjnzTMyJJeq5hShi_IMG_2800square.jpg"
+                             src="../static/images/instructor_jt.jpg"
                              width="30"
                              height="30"
-                             class="img-circle"/>
+                             class="img-circle"
+                             th:src="@{/images/instructor_jt.jpg}" />
                         <div class="small course-author-name">
                             John Thompson
                         </div>
@@ -246,12 +254,13 @@
         <div class="col-md-4">
             <div class="course-listing">
                 <div class="row">
-                    <a data-role="course-box-link" href="product.html">
+                    <a data-role="course-box-link" href="product">
                         <div class="col-lg-12">
                             <div class="course-box-image-container">
                                 <img role="presentation"
-                                     src="https://d2vvqscadf4c1f.cloudfront.net/wc9ORhpRQUataALq2ejc_ThumbSPRINcoreDevOps2.png"
-                                     class="course-box-image"/>
+                                     src="../static/images/SpringCoreDevOpsThumb.png"
+                                     class="course-box-image"
+                                     th:src="@{/images/SpringCoreDevOpsThumb.png}"/>
                             </div>
                             <div class="course-listing-title">
                                 Spring Core Dev Ops
@@ -265,10 +274,11 @@
                 <div class="row course-listing-extra-info col-xs-12">
                     <div class="col-xs-8">
                         <img align="left" alt="John Thompson"
-                             src="https://d2vvqscadf4c1f.cloudfront.net/uZC7XjnzTMyJJeq5hShi_IMG_2800square.jpg"
+                             src="../static/images/instructor_jt.jpg"
                              width="30"
                              height="30"
-                             class="img-circle"/>
+                             class="img-circle"
+                             th:src="@{/images/instructor_jt.jpg}"/>
                         <div class="small course-author-name">
                             John Thompson
                         </div>
@@ -285,12 +295,13 @@
         <div class="col-md-4">
             <div class="course-listing">
                 <div class="row">
-                    <a data-role="course-box-link" href="product.html">
+                    <a data-role="course-box-link" href="product">
                         <div class="col-lg-12">
                             <div class="course-box-image-container">
                                 <img role="presentation"
-                                     src="https://d2vvqscadf4c1f.cloudfront.net/DkBQKd4WQxWTCLnFwJCR_ThumbSPRINcoreUltimate.png"
-                                     class="course-box-image"/>
+                                     src="../static/images/SpringCoreUltimateThumb.png"
+                                     class="course-box-image"
+                                     th:src="@{/images/SpringCoreUltimateThumb.png}"/>
                             </div>
                             <div class="course-listing-title">
                                 Spring Core Ultimate
@@ -318,12 +329,13 @@
         <div class="col-md-4">
             <div class="course-listing">
                 <div class="row">
-                    <a data-role="course-box-link" href="product.html">
+                    <a data-role="course-box-link" href="product">
                         <div class="col-lg-12">
                             <div class="course-box-image-container">
                                 <img role="presentation"
-                                     src="https://d2vvqscadf4c1f.cloudfront.net/J8mqML4lQRmUmM4gdCW0_Thumb_Thymeleaf.png"
-                                     class="course-box-image"/>
+                                     src="../static/images/ThymeleafThumb.png"
+                                     class="course-box-image"
+                                     th:src="@{/images/ThymeleafThumb.png}"/>
                             </div>
                             <div class="course-listing-title">
                                 Thymeleaf
@@ -337,10 +349,11 @@
                 <div class="row course-listing-extra-info col-xs-12">
                     <div class="col-xs-8">
                         <img align="left" alt="John Thompson"
-                             src="https://d2vvqscadf4c1f.cloudfront.net/uZC7XjnzTMyJJeq5hShi_IMG_2800square.jpg"
+                             src="../static/images/instructor_jt.jpg"
                              width="30"
                              height="30"
-                             class="img-circle"/>
+                             class="img-circle"
+                             th:src="@{/images/instructor_jt.jpg}"/>
                         <div class="small course-author-name">
                             John Thompson
                         </div>
