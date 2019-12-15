@@ -23,7 +23,7 @@ public class ProductController {
 
     @RequestMapping("/product")
     public String getProduct() {
-        return "redirect:/index";
+        return "redirect:index";
     }
 
     @RequestMapping("/product/{id}")
